@@ -392,6 +392,7 @@
     store.set('kk-lang', next);
     if (!motion) { lang = next; applyLang(); return; }
     swapTxt.textContent = UI[next].swap;
+    swapTxt.dataset.to = next;
     gsap.timeline()
       .set(swapEl, { clipPath: 'inset(100% 0 0 0)' })
       .to(swapEl, { clipPath: 'inset(0% 0 0 0)', duration: .55, ease: 'expo.inOut' })
